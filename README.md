@@ -17,11 +17,24 @@ In the $providers array add the following service provider for this package;
 Yalcinkaya\Tinymce\TinymceServiceProvider
 ```
 ###**Configuration**
-```
-php artisan asset:publish yalcinkaya/tinymce
-```
-
 The preparation of the necessary files for TinyMCE
 ```
 {{ Tinymce::init() }}
 ```
+####**Default**
+```
+"selector" => "textarea",
+"valid_elements" => "*[*]",
+"language" => "tr_TR",
+```
+####**Custom**
+```
+{{ 
+	Tinymce::init([
+		"selector" => ".text"
+	]) 
+}}
+```
+For more [Tinymce Document](http://www.tinymce.com/wiki.php/Configuration)
+
+> **Currently there are only Turkish. Other languages ​​will be added soon**
